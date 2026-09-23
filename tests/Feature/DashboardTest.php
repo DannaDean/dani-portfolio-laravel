@@ -105,6 +105,7 @@ class DashboardTest extends TestCase
     public function test_uploaded_skill_and_project_images_use_portable_paths(): void
     {
         Storage::fake('public');
+        config(['portfolio.upload_disk' => 'public']);
         $this->actingAs(User::factory()->create());
 
         $this->post('/dashboard/skills', [
@@ -130,5 +131,23 @@ class DashboardTest extends TestCase
         $this->assertStringStartsWith('/storage/projects/', $project->mobile_img);
         Storage::disk('public')->assertExists(substr($project->desk_img, strlen('/storage/')));
         Storage::disk('public')->assertExists(substr($project->mobile_img, strlen('/storage/')));
+    }
+
+    public function test_uploaded_images_use_the_configured_cloud_disk(): void
+    {
+        Storage::fake('s3');
+        config(['portfolio.upload_disk' => 's3']);
+        $this->actingAs(User::factory()->create());
+
+        $this->post('/dashboard/skills', [
+            'image_upload' => UploadedFile::fake()->image('cloud-skill.png'),
+        ])->assertSessionHasNoErrors()->assertRedirect();
+
+        $skill = DB::table('skills')->first();
+        $files = Storage::disk('s3')->allFiles('skills');
+
+        $this->assertCount(1, $files);
+        $this->assertStringEndsWith('/'.$files[0], $skill->image);
+        Storage::disk('s3')->assertExists($files[0]);
     }
 }

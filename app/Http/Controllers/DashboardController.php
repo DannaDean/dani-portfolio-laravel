@@ -56,6 +56,7 @@ class DashboardController extends Controller
         abort_unless($existing, 404);
 
         DB::table($section)->where('id', $id)->delete();
+
         // Uploaded files can be shared by records; leave them intact until explicitly replaced.
         return back()->with('success', 'Deleted successfully.');
     }
@@ -98,8 +99,9 @@ class DashboardController extends Controller
             $uploadKey = $field.'_upload';
             $column = $field === 'image' ? 'image' : $field.'_img';
             if ($request->hasFile($uploadKey)) {
-                $path = $request->file($uploadKey)->store($section, 'public');
-                $data[$column] = '/storage/'.$path;
+                $disk = config('portfolio.upload_disk');
+                $path = $request->file($uploadKey)->store($section, $disk);
+                $data[$column] = Storage::disk($disk)->url($path);
             } elseif ($existing && ! array_key_exists($column, $data)) {
                 $data[$column] = $existing->$column;
             }
