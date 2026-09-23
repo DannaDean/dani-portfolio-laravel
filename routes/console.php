@@ -18,6 +18,7 @@ Artisan::command('portfolio:create-admin', function () {
 
     if ($validation->fails()) {
         $this->error($validation->errors()->first());
+
         return 1;
     }
 
@@ -33,6 +34,7 @@ Artisan::command('portfolio:reset-admin-password', function () {
 
     if (! $user) {
         $this->error('No MySQL account exists for that email. Run portfolio:create-admin instead.');
+
         return 1;
     }
 
@@ -43,6 +45,7 @@ Artisan::command('portfolio:reset-admin-password', function () {
 
     if ($validation->fails()) {
         $this->error($validation->errors()->first());
+
         return 1;
     }
 
@@ -51,3 +54,27 @@ Artisan::command('portfolio:reset-admin-password', function () {
 
     return 0;
 })->purpose('Reset a portfolio admin password locally');
+
+Artisan::command('portfolio:sync-admin', function () {
+    $credentials = config('portfolio.admin');
+    $validation = Validator::make($credentials, [
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'email', 'max:255'],
+        'password' => ['required', Password::min(12)],
+    ]);
+
+    if ($validation->fails()) {
+        $this->error('Set PORTFOLIO_ADMIN_NAME, PORTFOLIO_ADMIN_EMAIL, and a password of at least 12 characters.');
+
+        return 1;
+    }
+
+    User::updateOrCreate(
+        ['email' => $credentials['email']],
+        ['name' => $credentials['name'], 'password' => $credentials['password']]
+    );
+
+    $this->info('Production administrator account is ready. Remove the temporary admin environment variables now.');
+
+    return 0;
+})->purpose('Create or update the production administrator from temporary environment variables');
