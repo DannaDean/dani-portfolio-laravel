@@ -1,0 +1,321 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Cart Engineering",
+            "link": "https://www.cartengineering.md/",
+            "categories": "[\"PHP\",\"Frontend\",\"Responsive\"]",
+            "desk_img": "assets/projects/cartDesk.webp",
+            "mobile_img": "assets/projects/cartMobile.webp",
+            "created_at": "2026-09-22 14:07:58",
+            "updated_at": "2026-09-22 14:07:58"
+        },
+        {
+            "id": 3,
+            "title": "Broker Logistic SRL",
+            "link": "https://www.brokerlogistic.md/",
+            "categories": "[\"PHP\",\"Frontend\"]",
+            "desk_img": "assets/projects/brokerDesk.webp",
+            "mobile_img": "assets/projects/brokerMobile.webp",
+            "created_at": "2026-09-22 14:09:47",
+            "updated_at": "2026-09-22 14:09:47"
+        },
+        {
+            "id": 4,
+            "title": "Global Citizen Pass",
+            "link": "https://globalcitizenpass.com/",
+            "categories": "[\"WordPress\"]",
+            "desk_img": "assets/projects/globalDesk.webp",
+            "mobile_img": "assets/projects/globalMobile.webp",
+            "created_at": "2026-09-22 14:10:33",
+            "updated_at": "2026-09-22 14:10:33"
+        },
+        {
+            "id": 5,
+            "title": "Aviclima",
+            "link": "https://aviclima.md/",
+            "categories": "[\"Laravel\",\"Frontend\",\"CRUD\"]",
+            "desk_img": "assets/projects/aviclimaDesk.webp",
+            "mobile_img": "assets/projects/aviclimaMobile.webp",
+            "created_at": "2026-09-22 14:11:23",
+            "updated_at": "2026-09-22 14:11:29"
+        },
+        {
+            "id": 6,
+            "title": "MADgroup",
+            "link": "https://madgroup.md/",
+            "categories": "[\"Laravel\",\"Frontend\",\"Backend\"]",
+            "desk_img": "assets/projects/madDesk.webp",
+            "mobile_img": "assets/projects/madMobile.webp",
+            "created_at": "2026-09-22 14:12:09",
+            "updated_at": "2026-09-22 14:12:09"
+        },
+        {
+            "id": 7,
+            "title": "Relocation Compass",
+            "link": "https://relocationcompass.com/",
+            "categories": "[\"WordPress\"]",
+            "desk_img": "assets/projects/relocationDesk.webp",
+            "mobile_img": "assets/projects/relocationMobile.webp",
+            "created_at": "2026-09-22 14:12:47",
+            "updated_at": "2026-09-22 14:12:47"
+        },
+        {
+            "id": 8,
+            "title": "FlexMag",
+            "link": "https://flexmag.md/",
+            "categories": "[\"Laravel\",\"Ecommerce\",\"Frontend\",\"CRUD\"]",
+            "desk_img": "assets/projects/flexDesk.webp",
+            "mobile_img": "assets/projects/flexMobile.webp",
+            "created_at": "2026-09-22 14:13:33",
+            "updated_at": "2026-09-22 14:13:33"
+        },
+        {
+            "id": 9,
+            "title": "PLT",
+            "link": "https://plt.md/",
+            "categories": "[\"Laravel\",\"Frontend\",\"CRUD\"]",
+            "desk_img": "assets/projects/pltDesk.webp",
+            "mobile_img": "assets/projects/pltMobile.webp",
+            "created_at": "2026-09-22 14:14:30",
+            "updated_at": "2026-09-22 14:14:30"
+        },
+        {
+            "id": 10,
+            "title": "X Industry",
+            "link": null,
+            "categories": "[\"Laravel\",\"Frontend\",\"Responsive\"]",
+            "desk_img": "assets/projects/industryDesk.webp",
+            "mobile_img": "assets/projects/industryMobile.webp",
+            "created_at": "2026-09-22 14:15:23",
+            "updated_at": "2026-09-22 14:16:10"
+        },
+        {
+            "id": 11,
+            "title": "Fastwarm - Kit builder",
+            "link": "https://www.fastwarm.com/system-selector-111-w.asp",
+            "categories": "[\"Vue\",\"Laravel\",\"SCSS\"]",
+            "desk_img": "/portfolio/uploads/projects/BCZYrxzq9r3dAJQ7FxLhHCV1kv2vBHxHVZ0NDilH.webp",
+            "mobile_img": "/portfolio/uploads/projects/qYt1L4fFRFKHI8najra2vbG84LBVU2tkYAHkwhhT.webp",
+            "created_at": "2026-09-22 16:31:05",
+            "updated_at": "2026-09-22 16:31:05"
+        },
+        {
+            "id": 12,
+            "title": "Fastwarm - Stockist Finder",
+            "link": "https://www.fastwarm.com/fastwarm-stockists-114-w.asp",
+            "categories": "[\"Vue\",\"API\",\"Laravel\"]",
+            "desk_img": "/portfolio/uploads/projects/shqKlOcoHRywiA0jKOKyUGsW5taeRbgSD4bZdsxM.webp",
+            "mobile_img": "/portfolio/uploads/projects/bitShe8Fp5T5qaFRe5RS1222je9pOyBvMMPZG66l.webp",
+            "created_at": "2026-09-22 16:32:31",
+            "updated_at": "2026-09-22 16:32:31"
+        }
+    ],
+    "skills": [
+        {
+            "id": 1,
+            "title": "Bootstrap",
+            "image": "assets/skills/bootstrap.png",
+            "created_at": "2026-09-22 13:53:43",
+            "updated_at": "2026-09-22 13:53:43"
+        },
+        {
+            "id": 2,
+            "title": "GitHub",
+            "image": "assets/skills/git.png",
+            "created_at": "2026-09-22 13:54:58",
+            "updated_at": "2026-09-22 13:54:58"
+        },
+        {
+            "id": 3,
+            "title": null,
+            "image": "assets/skills/wordpress.png",
+            "created_at": "2026-09-22 13:55:13",
+            "updated_at": "2026-09-22 14:04:19"
+        },
+        {
+            "id": 4,
+            "title": "PHP",
+            "image": "assets/skills/php.svg",
+            "created_at": "2026-09-22 13:55:53",
+            "updated_at": "2026-09-22 13:55:53"
+        },
+        {
+            "id": 5,
+            "title": null,
+            "image": "assets/skills/mysql.svg",
+            "created_at": "2026-09-22 13:56:30",
+            "updated_at": "2026-09-22 14:04:02"
+        },
+        {
+            "id": 6,
+            "title": "CSS/SCSS",
+            "image": "assets/skills/css.svg",
+            "created_at": "2026-09-22 13:56:48",
+            "updated_at": "2026-09-22 13:56:48"
+        },
+        {
+            "id": 7,
+            "title": "Figma",
+            "image": "assets/skills/figma.svg",
+            "created_at": "2026-09-22 13:57:06",
+            "updated_at": "2026-09-22 13:57:06"
+        },
+        {
+            "id": 8,
+            "title": "Laravel",
+            "image": "assets/skills/laravel.svg",
+            "created_at": "2026-09-22 13:57:19",
+            "updated_at": "2026-09-22 13:57:19"
+        },
+        {
+            "id": 9,
+            "title": "React",
+            "image": "assets/skills/react.svg",
+            "created_at": "2026-09-22 13:57:31",
+            "updated_at": "2026-09-22 13:57:31"
+        },
+        {
+            "id": 10,
+            "title": null,
+            "image": "assets/skills/js.svg",
+            "created_at": "2026-09-22 13:57:42",
+            "updated_at": "2026-09-22 14:03:12"
+        },
+        {
+            "id": 11,
+            "title": "HTML",
+            "image": "assets/skills/html.svg",
+            "created_at": "2026-09-22 13:57:58",
+            "updated_at": "2026-09-22 13:57:58"
+        },
+        {
+            "id": 12,
+            "title": "VUE",
+            "image": "/portfolio/uploads/skills/rEUPk3j9O3GTCwrouH0nWSTA5krcst8RPziACk6E.png",
+            "created_at": "2026-09-22 15:30:01",
+            "updated_at": "2026-09-22 15:37:58"
+        },
+        {
+            "id": 13,
+            "title": "BEM",
+            "image": null,
+            "created_at": "2026-09-22 15:38:22",
+            "updated_at": "2026-09-22 15:38:22"
+        },
+        {
+            "id": 14,
+            "title": "Photoshop",
+            "image": "/portfolio/uploads/skills/RBoIpaaIvC5n1pEYEmWMvaDCtE8hTGee8ScFGrji.png",
+            "created_at": "2026-09-22 16:07:54",
+            "updated_at": "2026-09-22 16:07:54"
+        },
+        {
+            "id": 15,
+            "title": "Premiere Pro",
+            "image": "/portfolio/uploads/skills/aHUzlAeKCzky08No7FWUNsIphJZ8jFcX3Vr3fuwq.png",
+            "created_at": "2026-09-22 16:08:14",
+            "updated_at": "2026-09-22 16:08:14"
+        },
+        {
+            "id": 16,
+            "title": "Illustrator",
+            "image": "/portfolio/uploads/skills/CPGbQVd5SPLkOa4usSml9MJBt01J0SNfyZ0Q1nQc.png",
+            "created_at": "2026-09-22 16:08:27",
+            "updated_at": "2026-09-22 16:08:27"
+        },
+        {
+            "id": 17,
+            "title": "In Design",
+            "image": "/portfolio/uploads/skills/iXYbDDcFqivECG3JwfvekqfhnrXovRW4M1qGrsjR.png",
+            "created_at": "2026-09-22 16:08:46",
+            "updated_at": "2026-09-22 16:08:46"
+        },
+        {
+            "id": 18,
+            "title": null,
+            "image": "/portfolio/uploads/skills/lRTqbKtvPeCp5aPDJBzC72G1FSZXEhH8xy4b1bux.png",
+            "created_at": "2026-09-22 16:09:16",
+            "updated_at": "2026-09-22 16:09:52"
+        },
+        {
+            "id": 19,
+            "title": "EXCEL",
+            "image": "/portfolio/uploads/skills/WzQ3joHOwxgw22yfFLf6h6kQ192pY8S9mxRgZQWr.png",
+            "created_at": "2026-09-23 09:58:54",
+            "updated_at": "2026-09-23 09:58:54"
+        }
+    ],
+    "facts": [
+        {
+            "id": 1,
+            "title": "My main area of expertise",
+            "text": "<p>I’m a web developer with experience across both front-end and back-end development, primarily working with Laravel, Vue.js, JavaScript, HTML, and CSS.</p>\n\n<p>Over the last few years, my role has expanded beyond traditional web development. At Fastwarm, I was responsible for maintaining and improving the company’s website, developing new functionality, working with APIs, managing product data across multiple e-commerce platforms, and supporting digital and creative projects.</p>\n\n<p>I enjoy working on projects where I can combine development with problem-solving — whether that means building a new feature, connecting external systems, automating a repetitive process, or learning a completely new tool to get the job done.</p>",
+            "created_at": "2026-09-22 14:05:08",
+            "updated_at": "2026-09-23 09:38:59"
+        },
+        {
+            "id": 2,
+            "title": "What I worked on at Fastwarm",
+            "text": "<p>During my time at Fastwarm Underfloor Heating, I worked across a wide range of technical and digital projects.</p>\n\n<p>One of the larger features I developed was the FastMatch Kit Builder, designed to help customers find the right underfloor heating products for their requirements. I also built a postcode-based stockist finder, allowing customers to locate relevant stockists based on their location.</p>\n\n<p>Another major part of my work involved APIs and third-party integrations. I contributed to systems connecting Fastwarm's product database with marketplaces including Amazon, ManoMano, and Wayfair, helping keep pricing and product information synchronised across platforms.</p>\n\n<p>I also worked with Google’s APIs and advertising tools to help create customer audiences based specifically on Fastwarm customers for more targeted advertising campaigns.</p>\n\n<p>Alongside development, I regularly managed and updated large amounts of product information, including descriptions, specifications, pricing, images, and marketplace listings.</p>",
+            "created_at": "2026-09-22 14:05:31",
+            "updated_at": "2026-09-23 09:40:53"
+        },
+        {
+            "id": 3,
+            "title": "More than just development",
+            "text": "<p>One of the biggest things I learned at Fastwarm was how valuable it is to be adaptable.</p>\n\n<p>When a project required skills outside development, I was willing to learn them rather than limit myself to what I already knew. I learned Adobe InDesign and Illustrator to work with new designs and marketing materials, Photoshop for editing product photography, and Premiere Pro for producing and editing video content.</p>\n\n<p>I also learned to use professional camera equipment to photograph products that needed better imagery. For video projects, I edited footage, selected the relevant sections, incorporated AI-generated voiceovers from prepared scripts, and created intros, outros, and transitions.</p>\n\n<p>This experience made me much more comfortable stepping outside my main specialism and learning whatever is necessary to complete a project.</p>",
+            "created_at": "2026-09-22 14:05:43",
+            "updated_at": "2026-09-23 09:43:54"
+        },
+        {
+            "id": 4,
+            "title": "How I approach complex problems",
+            "text": "<p>When I encounter a difficult problem, I try to understand it before immediately looking for a solution. I break the issue down, investigate what could be causing it, research documentation and similar problems, and use tools such as AI when they can provide another perspective.</p>\n\n<p>My professional experience has taught me that problems are not always isolated to the code itself. The cause could be an API, configuration, incorrect product data, an external platform, or something as small as a formatting error.</p>\n\n<p>Because of that, I’ve developed a much broader debugging mindset: understand the whole system, test assumptions, and keep narrowing the problem down until I find the cause.&gt;</p>",
+            "created_at": "2026-09-22 14:05:51",
+            "updated_at": "2026-09-23 09:44:52"
+        },
+        {
+            "id": 5,
+            "title": "Projects and features I’m proud of",
+            "text": "<p>I particularly enjoy projects where there is a clear problem to solve rather than simply implementing a standard page.</p>\n\n<p>The FastMatch Kit Builder and stockist finder are good examples because they required turning business requirements into functionality that customers could actually use.</p>\n\n<p>I’ve also enjoyed working on integrations between Fastwarm and external marketplaces such as Amazon, ManoMano, and Wayfair. These projects gave me more experience working with APIs, structured product data, synchronisation, and the challenges that come with maintaining information across multiple systems.</p>\n\n<p>Earlier in my career, projects such as MADgroup and xIndustry helped develop my front-end skills through unusual layouts, animations, dynamic grids, and custom interactions. Together, these experiences have given me a good balance between creative front-end development and practical business-focused development.</p>",
+            "created_at": "2026-09-22 14:06:03",
+            "updated_at": "2026-09-23 09:45:53"
+        },
+        {
+            "id": 6,
+            "title": "What it’s like to work with me",
+            "text": "<p>I’m adaptable, reliable, and comfortable taking responsibility for unfamiliar tasks.</p>\n\n<p>I don’t expect to know everything from the beginning. If a project requires a technology or tool I haven’t used before, I’m comfortable researching it, asking questions, experimenting, and learning what I need to move the project forward.</p>\n\n<p>I value clear communication and teamwork, but I’m also comfortable working independently and taking ownership of a task from the initial problem through to implementation.</p>\n\n<p>My experience at Fastwarm strengthened this considerably because my responsibilities often extended beyond development. I learned to move between coding, APIs, product data, design, photography, video editing, and e-commerce depending on what the business needed.</p>",
+            "created_at": "2026-09-22 14:06:15",
+            "updated_at": "2026-09-23 09:46:39"
+        },
+        {
+            "id": 7,
+            "title": "The kind of work I enjoy",
+            "text": "<p>I enjoy development most when I’m building something that has a practical purpose.</p>\n\n<p>That could be an interactive customer tool, an API integration, an e-commerce feature, an internal process that can be automated, or a front-end experience with interesting interactions and animations.</p>\n\n<p>I particularly like projects that require some investigation and problem-solving rather than having an obvious solution from the beginning. Those projects usually teach me the most and give me the opportunity to improve both technically and professionally.</p>",
+            "created_at": "2026-09-22 14:06:25",
+            "updated_at": "2026-09-23 09:47:25"
+        },
+        {
+            "id": 8,
+            "title": "Technologies and tools I work with",
+            "text": "<p>My core development experience includes Laravel, Vue.js, JavaScript, HTML, CSS, PHP, APIs, MySQL, and Git.</p>\n\n<p>I also have experience with WordPress, ACF, GSAP, Bootstrap, EKM, REST APIs, Google APIs, Amazon, ManoMano and Wayfair marketplace integrations, as well as working extensively with Excel and CSV-based import/export workflows for managing large amounts of product data.</p>\n\n<p>Outside development, I have practical experience with Adobe Photoshop, Illustrator, InDesign, and Premiere Pro, as well as product photography and basic video production.</p>\n\n<p>I don’t consider every tool I’ve used to be a core specialism, but I’m comfortable learning new technologies when a project requires them.</p>",
+            "created_at": "2026-09-22 14:06:34",
+            "updated_at": "2026-09-23 09:48:11"
+        },
+        {
+            "id": 9,
+            "title": "How I’ve grown as a developer",
+            "text": "<p>My career started with a strong focus on front-end development. My first professional role introduced me to Laravel and gave me experience building complete websites, implementing custom functionality, working with databases, and translating designs into responsive interfaces.</p>\n\n<p>My time at Fastwarm expanded that experience significantly. Instead of focusing only on building websites, I became involved with the wider systems surrounding an e-commerce business — APIs, marketplaces, product databases, advertising integrations, data management, photography, design, and video.</p>\n\n<p>That experience changed how I think about development. I now look beyond simply writing the code and think more about the problem the business is trying to solve, how different systems connect, and what the most practical solution is.</p>",
+            "created_at": "2026-09-23 09:48:46",
+            "updated_at": "2026-09-23 09:48:46"
+        },
+        {
+            "id": 10,
+            "title": "What I’m looking to develop next",
+            "text": "<p>I want to continue strengthening my skills in Laravel and Vue.js while developing further as a full-stack developer.</p>\n\n<p>I’m particularly interested in becoming stronger with APIs, integrations, modern JavaScript frameworks, application architecture, and building larger systems rather than only individual websites.</p>\n\n<p>At the same time, I want to keep the adaptability I’ve developed throughout my career. Technology changes quickly, and I’m comfortable learning new frameworks, platforms, and tools when they help me build better solutions.</p>",
+            "created_at": "2026-09-23 09:49:20",
+            "updated_at": "2026-09-23 09:54:11"
+        }
+    ]
+}
