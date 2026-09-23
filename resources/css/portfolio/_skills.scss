@@ -1,0 +1,125 @@
+@use "../Vars" as *;
+
+// --- Skills --- //
+.skills {
+  margin: 5rem 0;
+
+  .marquee-container {
+    @include flex(1rem, row);
+    background-color: $beige;
+    padding: 2rem;
+    border-radius: $border-radius-2;
+
+    @include respond-to(xsmall) {
+      display: block;
+      padding: 1.5rem 1.5rem 2rem;
+      overflow: hidden;
+    }
+
+    p {
+      min-width: 110px;
+      font-size: 1rem;
+      font-weight: bold;
+
+      @include respond-to(xsmall) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .marquee {
+      --gap: 2rem;
+      --duration: 55s;
+
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      overflow: hidden;
+      user-select: none;
+      gap: var(--gap);
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        #ffffff 10% 90%,
+        transparent
+      );
+
+      @include respond-to(xsmall) {
+        --gap: 1.25rem;
+      }
+
+      &__group {
+        flex: 0 0 max-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--gap);
+        min-width: 100%;
+        animation: scroll-x var(--duration) linear infinite;
+        will-change: transform;
+        backface-visibility: hidden;
+
+        .logo-item {
+          @include flex(1rem, row);
+          flex: 0 0 auto;
+          min-width: 0;
+
+          img {
+            width: 48px;
+            height: 40px;
+            object-fit: contain;
+            flex: 0 0 auto;
+          }
+
+          .logo-title {
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+
+      }
+
+      &:hover .marquee__group,
+      &:focus-within .marquee__group {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  .conect-box {
+    @include flex-two(1.5rem, row);
+    justify-content: space-between;
+    padding: 2rem 1.25rem 2rem 2rem;
+    background-color: rgba(237, 187, 249, 1);
+    border-radius: $border-radius-2;
+    margin-top: 2rem;
+
+    @include respond-to(xsmall) {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+
+    h3 {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn {
+      color: $text;
+
+      &:hover {
+        background-color: $beige !important;
+      }
+    }
+  }
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-100% - var(--gap)), 0, 0);
+  }
+}
+

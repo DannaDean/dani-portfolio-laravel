@@ -1,0 +1,20 @@
+@media (prefers-reduced-motion: reduce) {
+  .hero .name .char,
+  .hero .box,
+  .marquee__group {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .portfolio-popup-enter-active,
+  .portfolio-popup-leave-active,
+  .portfolio-popup-enter-active .popup-content,
+  .portfolio-popup-leave-active .popup-content {
+    transition: none !important;
+  }
+
+  .marquee__group[aria-hidden="true"] {
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+@use "../Vars" as *;
+
+// --- Facts --- //
+.fact {
+  .fact-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+
+    @include respond-to(small) {
+      grid-template-columns: 1fr;
+      margin-top: 1.5rem;
+    }
+
+    .fact-section {
+      @include flex-two(1.5rem, column);
+
+      .fact-item {
+        background-color: $beige;
+        border-radius: 1.5rem;
+
+        .fact-title {
+          width: 100%;
+          border: 0;
+          background: transparent;
+          color: $text;
+          text-align: left;
+          @include flex-two(1rem, row);
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 1.5rem;
+          padding: 1.5rem 2.5rem;
+          cursor: pointer;
+          transition: $transition;
+
+          &:hover {
+            background-color: $yellow;
+          }
+
+          span {
+            transition: $transition;
+
+            &.active {
+              transform: rotate(45deg);
+            }
+          }
+
+          @include respond-to(small) {
+            padding: 1.5rem;
+          }
+        }
+
+        .fact-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+          &.show {
+            transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+          }
+
+          div {
+            padding: 1.5rem;
+          }
+
+          .fact-rich-text {
+            p + p,
+            p + ul,
+            p + ol,
+            ul + p,
+            ol + p {
+              margin-top: 1rem;
+            }
+
+            ul,
+            ol {
+              padding-left: 1.5rem;
+            }
+
+            li + li {
+              margin-top: .4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

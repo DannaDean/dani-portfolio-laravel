@@ -1,0 +1,86 @@
+@use "../Vars" as *;
+
+// Form
+form {
+  .custom-field {
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    display: inline-block;
+    --field-padding: 1rem;
+
+    input,
+    textarea {
+      background: none;
+      padding: 1.25rem var(--field-padding);
+      border-radius: $border-radius-1;
+      width: 100%;
+      outline: none;
+      font-size: 1rem;
+      border: 2px solid $text;
+      color: $text;
+      transition: $transition;
+
+      &:focus {
+        border-color: rgb(255, 157, 101);
+      }
+
+      & + .placeholder {
+        left: 8px;
+        padding: 0 5px;
+      }
+
+      &:focus + .placeholder,
+      &.filled + .placeholder {
+        top: 0;
+        font-size: 10px;
+        color: rgb(255, 157, 101);
+        background: rgba(253, 249, 236, 1);
+        width: auto;
+      }
+    }
+
+    input[type="file"] {
+      &::file-selector-button {
+        padding: 1rem;
+        border-width: 0;
+        border-radius: 1.5rem;
+        background-color: $text;
+        color: $white;
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+        margin-right: 1em;
+      }
+      &:hover {
+        &::file-selector-button {
+          background-color: $rose;
+        }
+      }
+    }
+
+    .placeholder {
+      position: absolute;
+      left: var(--field-padding);
+      width: calc(100% - (var(--field-padding) * 2));
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      top: 30px;
+      line-height: 100%;
+      transform: translateY(-50%);
+      color: #aaa;
+      transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+

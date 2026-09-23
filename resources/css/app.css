@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Figtree, sans-serif; }
+.auth-shell { min-height: 100vh; display: grid; place-items: center; padding: 2rem; background: #f7f4ee; color: #252525; }
+.auth-card { width: min(100%, 420px); padding: 2.5rem; background: #fff; border-radius: 20px; box-shadow: 0 12px 40px #00000012; }
+.auth-brand { display: inline-block; margin-bottom: 1.5rem; font-weight: 700; font-size: 1.15rem; }
+.auth-card h1 { font-size: 2rem; margin: 0 0 1.5rem; }
+.auth-card p { line-height: 1.6; }
+.auth-card form { display: grid; gap: .6rem; margin: 1.5rem 0; }
+.auth-card label { font-weight: 600; }
+.auth-card input:not([type="checkbox"]) { width: 100%; padding: .8rem; border: 1px solid #b7b7b7; border-radius: 8px; font: inherit; }
+.auth-card .check-label { display: flex; align-items: center; gap: .5rem; margin: .5rem 0; font-weight: 400; }
+.auth-card button { margin-top: .6rem; padding: .85rem 1rem; border: 0; border-radius: 8px; background: #292929; color: white; font: inherit; font-weight: 600; cursor: pointer; }
+.auth-card button:disabled { opacity: .6; cursor: wait; }
+.auth-card a { color: inherit; }
+.auth-card .form-error { color: #b42318; margin: 0 0 .5rem; }
+.auth-card .form-status { color: #287647; }
+.auth-card .login-error { max-width: 460px; margin-top: 24px; padding: 12px 14px; border-radius: 10px; background: #fff5f2; font-weight: 600; }
+
+/* Login and password reset share the original portfolio's orange flower panel. */
+.auth-shell { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; background: #fdf9ec; color: #11193b; }
+.auth-back { width: min(100%, 1100px); color: #11193b; text-decoration: none; font-weight: 600; }
+.auth-back:hover { color: #c71e70; }
+.auth-card { position: relative; isolation: isolate; overflow: hidden; width: min(100%, 1100px); min-height: 570px; padding: clamp(35px, 6vw, 80px); border-radius: 40px; background: #ff9d65; box-shadow: none; }
+.auth-content { position: relative; z-index: 1; width: min(100%, 570px); }
+.auth-eyebrow { display: block; font-size: 12px; font-weight: 800; letter-spacing: .15em; margin-bottom: 35px; }
+.auth-card h1 { margin: 0; font-size: clamp(55px, 9vw, 110px); letter-spacing: -.065em; line-height: 1; }
+.auth-card h2 { font-size: clamp(21px, 3vw, 33px); margin: 16px 0 0; font-weight: 600; }
+.auth-card form { max-width: 460px; margin: 45px 0 20px; gap: 10px; }
+.auth-card form > label:not(.check-label) { margin-top: 12px; font-size: 14px; }
+.auth-card input:not([type="checkbox"]) { background: #fff9; border: 2px solid transparent; border-radius: 10px; padding: 14px 16px; }
+.auth-card input:focus { outline: 2px solid #11193b; outline-offset: 1px; }
+.auth-card button { display: flex; align-items: center; justify-content: space-between; max-width: 230px; width: 100%; background: #11193b; border-radius: 12px; margin-top: 20px; padding: 14px 20px; }
+.auth-card button:hover { background: #c71e70; }
+.auth-card a:not(.auth-brand) { font-weight: 600; }
+.auth-flower { position: absolute; right: -6%; bottom: -21%; width: min(45%, 460px); height: auto; transform: rotate(-18deg); pointer-events: none; }
+@media (max-width: 700px) {
+    .auth-card { min-height: 600px; border-radius: 24px; }
+    .auth-flower { width: 240px; right: -55px; bottom: -100px; opacity: .75; }
+    .auth-content { padding-bottom: 70px; }
+}

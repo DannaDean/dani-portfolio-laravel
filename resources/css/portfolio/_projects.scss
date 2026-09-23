@@ -1,0 +1,120 @@
+@use "../Vars" as *;
+
+// --- Projects --- //
+.projects {
+  margin-top: 4rem;
+
+  .box {
+    p {
+      margin-top: 5rem;
+      width: 600px;
+
+      @include respond-to(small) {
+        width: 100%;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: -90px;
+      bottom: -200px;
+    }
+  }
+
+  .projects-container {
+    @include flex(2rem, column);
+    margin-top: 2.5rem;
+
+    .project-card {
+      @include flex-two(1.5rem, column);
+
+      .images-block {
+        @include flex-two(2rem, row);
+        align-items: end;
+        padding: 2.5rem 2.5rem 0;
+        border-radius: $border-radius-2;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          @include flex-two(0, row);
+          align-items: end;
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
+        }
+
+        .proj-img-one {
+          width: 75%;
+
+          @include respond-to(xsmall) {
+            width: 100%;
+          }
+        }
+
+        .proj-img-two {
+          width: 25%;
+
+          @include respond-to(xsmall) {
+            display: none;
+          }
+        }
+
+        @include respond-to(xsmall) {
+          padding: 1.5rem 1.5rem 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        .images-block {
+          background-color: $purple;
+        }
+      }
+      &:nth-child(even) {
+        .images-block {
+          background-color: $rose;
+        }
+      }
+
+      .project-content {
+        @include flex-two(2rem, row);
+        justify-content: space-between;
+
+        @include respond-to(small) {
+          @include flex(1rem, column-reverse);
+          align-items: start;
+        }
+
+        .categories {
+          @include flex(0.5rem);
+
+          .category {
+            font-weight: 400;
+            padding: 0.5rem 1rem;
+
+            @include respond-to(small) {
+              font-size: 14px;
+            }
+          }
+
+          @include respond-to(small) {
+            flex-wrap: wrap;
+            justify-content: start;
+          }
+        }
+      }
+    }
+  }
+
+  .projects-btn {
+    margin-top: 2rem;
+    @include flex(0.5rem);
+    justify-content: center;
+
+    .btn {
+      &:hover {
+        background-color: $rose;
+      }
+    }
+  }
+}
+

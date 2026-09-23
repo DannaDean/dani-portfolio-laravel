@@ -1,0 +1,148 @@
+@use "../Vars" as *;
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 32px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $text;
+}
+
+// General classes
+.inner-wrapper {
+  overflow: hidden;
+  font-family: "Figtree", sans-serif;
+
+  button,
+  input,
+  textarea {
+    font-family: inherit;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include respond-to(xsmall) {
+    max-width: 640px;
+  }
+  @include respond-to(small) {
+    max-width: 768px;
+  }
+  @include respond-to(medium) {
+    max-width: 1024px;
+  }
+  @include respond-to(large) {
+    max-width: 1280px;
+  }
+  @include respond-to(xlarge) {
+    max-width: 1536px;
+  }
+}
+
+.category {
+  @include flex();
+  border-radius: $border-radius-2;
+  padding: 0.5rem 1.5rem;
+  background-color: $beige;
+  font-weight: 700;
+  transition: all $transition;
+}
+a.category:hover {
+  background-color: $yellow !important;
+}
+.btn {
+  width: max-content;
+  @include flex(1rem);
+  padding: 0.75rem 2rem;
+  border-radius: $border-radius-2;
+  background-color: $text;
+  color: rgba(253, 249, 236, 1);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  transition: all $transition;
+  cursor: pointer;
+
+  svg {
+    transition: all $transition;
+  }
+  &:hover {
+    background-color: rgba(255, 87, 87, 1);
+
+    svg {
+      rotate: 90deg;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+.box {
+  position: relative;
+  @include flex-two(0, column);
+  padding: 3rem;
+  border-radius: $border-radius-2;
+  transition: all $transition;
+  overflow: hidden;
+
+  @include respond-to(xsmall) {
+    padding: 1.5rem;
+  }
+
+  .box-content {
+    position: relative;
+    z-index: 15;
+  }
+
+  img {
+    position: absolute;
+    right: -70px;
+    bottom: -150px;
+  }
+}
+
+// Dark Light Mode
+body.dark .hero h1,
+body.dark .projects h3,
+body.dark .fact h2 {
+  color: $beige;
+  transition: $transition;
+}
+body.dark header nav {
+  @include respond-to(xsmall) {
+    background-color: $black;
+  }
+}
+body.dark header .line {
+  background-color: $beige !important;
+}
+body.dark .projects button {
+  background-color: $beige;
+  color: $text;
+  transition: $transition;
+}
+body.dark .projects button:hover {
+  color: rgba(253, 249, 236, 1);
+}
+

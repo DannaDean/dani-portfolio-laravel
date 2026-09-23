@@ -1,0 +1,68 @@
+@use "../Vars" as *;
+
+// Preloader
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(253, 249, 236, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.3s;
+
+  .preloader-bars {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+
+    .bar {
+      flex: 1;
+      height: 100vh;
+      transform: translateZ(0);
+      opacity: 0.9;
+    }
+
+    .bar-0 {
+      background: #fffbe3;
+    }
+    .bar-1 {
+      background: #fef0d4;
+    }
+    .bar-2 {
+      background: #fed8a8;
+    }
+    .bar-3 {
+      background: #f7bfa5;
+    }
+    .bar-4 {
+      background: #f2a4a4;
+    }
+    .bar-5 {
+      background: #e88d8d;
+    }
+  }
+
+  .preloader-name {
+    position: relative;
+    z-index: 3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    span {
+      display: inline-block;
+      opacity: 0;
+    }
+  }
+}
+
+.helper-text,
+.error {
+  color: $rose;
+}
+
