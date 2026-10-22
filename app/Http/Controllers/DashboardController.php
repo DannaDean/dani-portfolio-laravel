@@ -99,7 +99,9 @@ class DashboardController extends Controller
             $uploadKey = $field.'_upload';
             $column = $field === 'image' ? 'image' : $field.'_img';
             if ($request->hasFile($uploadKey)) {
-                $disk = config('portfolio.upload_disk');
+                $disk = isset($_SERVER['LARAVEL_CLOUD_DISK_CONFIG'])
+                    ? config('filesystems.default')
+                    : config('portfolio.upload_disk');
                 $path = $request->file($uploadKey)->store($section, $disk);
                 $data[$column] = Storage::disk($disk)->url($path);
             } elseif ($existing && ! array_key_exists($column, $data)) {

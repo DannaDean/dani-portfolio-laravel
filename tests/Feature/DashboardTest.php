@@ -150,4 +150,27 @@ class DashboardTest extends TestCase
         $this->assertStringEndsWith('/'.$files[0], $skill->image);
         Storage::disk('s3')->assertExists($files[0]);
     }
+
+    public function test_laravel_cloud_uploads_use_its_injected_default_disk(): void
+    {
+        Storage::fake('portfolio-bucket');
+        config([
+            'filesystems.default' => 'portfolio-bucket',
+            'portfolio.upload_disk' => 's3',
+        ]);
+        $_SERVER['LARAVEL_CLOUD_DISK_CONFIG'] = 'attached';
+
+        try {
+            $this->actingAs(User::factory()->create());
+            $this->post('/dashboard/skills', [
+                'image_upload' => UploadedFile::fake()->image('cloud-default.png'),
+            ])->assertSessionHasNoErrors()->assertRedirect();
+
+            $file = Storage::disk('portfolio-bucket')->allFiles('skills')[0];
+            Storage::disk('portfolio-bucket')->assertExists($file);
+            $this->assertStringEndsWith('/'.$file, DB::table('skills')->value('image'));
+        } finally {
+            unset($_SERVER['LARAVEL_CLOUD_DISK_CONFIG']);
+        }
+    }
 }

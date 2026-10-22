@@ -1,10 +1,7 @@
 <?php
 
 return [
-    'upload_disk' => env(
-        'PORTFOLIO_UPLOAD_DISK',
-        env('APP_ENV') === 'production' ? 's3' : 'public'
-    ),
+    'upload_disk' => env('PORTFOLIO_UPLOAD_DISK', 'public'),
 
     'admin' => [
         'name' => env('PORTFOLIO_ADMIN_NAME'),
